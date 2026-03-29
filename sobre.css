@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    border-bottom: 2px solid #d4af37;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #d4af37;
+    color: black;
+}
+
+.navbar a.ativo {
+    background-color: #d4af37;
+    color: black;
+}
+
+/* CAIXA PRINCIPAL */
+.caixa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 150px auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.caixa:hover {
+    transform: translateY(-5px);
+}
+
+/* TITULO */
+.titulo {
+    grid-column: 1 / 3;
+    text-align: center;
+    color: #d4af37;
+    text-shadow: 0 0 10px #d4af37;
+}
+
+/* SUBTITULO */
+.subtitulo {
+    grid-column: 1 / 3;
+    text-align: center;
+    color: #ccc;
+    margin-top: -10px;
+}
+
+/* TEXTO */
+.texto {
+    grid-column: 1 / 3;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* CARDS */
+.habilidades,
+.objetivos {
+    background: rgba(0, 0, 0, 0.6);
+    /* mais contraste */
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+
+    /* NOVO */
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: 0.3s;
+}
+
+/* TITULO DOS CARDS */
+.habilidades h2,
+.objetivos h2 {
+    color: #d4af37;
+}
+
+/* HOVER NOS CARDS */
+.habilidades:hover,
+.objetivos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #d4af37;
+    color: #aaa;
+}
+
+.footer-redes {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-redes a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-redes a:visited {
+    color: white;
+}
+
+.footer-redes a:hover {
+    color: #d4af37;
+    transform: scale(1.2);
+}
+
+.footer-redes i {
+    font-size: 32px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .caixa {
+        grid-template-columns: 1fr;
+    }
+
+    .habilidades,
+    .objetivos {
+        grid-column: 1;
+    }
+}

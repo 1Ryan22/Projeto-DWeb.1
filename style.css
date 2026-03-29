@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    border-bottom: 2px solid #d4af37;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #d4af37;
+    color: black;
+}
+
+.navbar a.ativo {
+    background-color: #d4af37;
+    color: black;
+}
+
+/* CAIXA */
+.caixa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 180px auto;
+    padding: 70px;
+    width: 90%;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    word-spacing: 2px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.caixa:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEM */
+.caixa img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+/* TEXTO */
+.conteudo {
+    text-align: center;
+    max-width: 500px;
+}
+
+.conteudo h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: #e0e0e0;
+}
+
+.conteudo p {
+    font-size: 17px;
+    margin: 10px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.cor {
+    color: #d4af37;
+    text-shadow: 0 0 8px #d4af37;
+}
+
+/* BOTÃO */
+.conteudo a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: #d4af37;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.conteudo a:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #d4af37;
+    color: #aaa;
+}
+
+.footer-redes {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-redes a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-redes a:visited {
+    color: white;
+}
+
+.footer-redes a:hover {
+    color: #d4af37;
+    transform: scale(1.2);
+}
+
+.footer-redes i {
+    font-size: 32px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .navbar {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 15px 10px;
+    }
+
+    .navbar a {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .caixa {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 25px;
+        margin: 140px auto 60px;
+    }
+
+    .caixa img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .conteudo h1 {
+        font-size: 26px;
+    }
+
+    .conteudo p {
+        font-size: 16px;
+    }
+}
