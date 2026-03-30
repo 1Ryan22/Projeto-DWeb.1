@@ -4,6 +4,8 @@
 
 body {
     margin: 0;
+    padding-top: 90px;
+    /* espaço exato da navbar */
     background-color: black;
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -14,12 +16,16 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    align-items: center;
+    height: 90px;
+    /* altura fixa */
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: black;
     border-bottom: 2px solid #d4af37;
+    z-index: 1000;
 }
 
 .navbar a {
@@ -40,7 +46,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
-    margin: 150px auto 40px auto;
+    margin: 40px auto;
     padding: 40px;
     width: 90%;
     max-width: 1100px;
@@ -54,7 +60,6 @@ body {
 .caixa:hover {
     transform: translateY(-5px);
 }
-
 
 /* TÍTULOS */
 .titulo,
